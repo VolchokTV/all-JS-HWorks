@@ -1,11 +1,13 @@
 // 1. Что выведет функция?
-function f() {
-alert(this);
-}
-let user = {
-g: f.bind(null),
-};
-user.g();
+
+// function f() {
+// alert(this);
+// }
+
+// let user = {
+// g: f.bind(null),
+// };
+// user.g();
 
 
 // 2. Можем ли мы изменить this дополнительным связыванием?
@@ -17,6 +19,7 @@ f();
 
 //3. В свойство функции записано значение. Изменится ли оно
 //после применения bind?
+
 function sayHi() {
 alert( this.name );
 }
@@ -31,26 +34,27 @@ alert( bound.test );
 //зависимости от ответа.
 //Однако, его вызов приводит к ошибке. Почему?
 
-function askPassword(ok, fail) {
-let password = prompt("Password?", '');
-if (password == "rockstar") ok();
-else fail();
-}
-let user = {
-name: 'Вася',
-loginOk() {
-alert(`${this.name} logged in`);
-},
-loginFail() {
-alert(`${this.name} failed to log in`);
-},
-};
-askPassword(user.loginOk, user.loginFail);
-5. Объект user был изменён. Теперь вместо двух функций
-loginOk/loginFail у него есть только одна – user.login(true/false).
-Что нужно передать в вызов функции askPassword в коде
-ниже, чтобы она могла вызывать функцию user.login(true) как
-ok и функцию user.login(false) как fail?
+// function askPassword(ok, fail) {
+// let password = prompt("Password?", '');
+// if (password == "rockstar") ok();
+// else fail();
+// }
+// let user = {
+// name: 'Вася',
+// loginOk() {
+// alert(`${this.name} logged in`);
+// },
+// loginFail() {
+// alert(`${this.name} failed to log in`);
+// },
+// };
+// askPassword(user.loginOk, user.loginFail);
+
+//5. Объект user был изменён. Теперь вместо двух функций
+//loginOk/loginFail у него есть только одна – user.login(true/false).
+//Что нужно передать в вызов функции askPassword в коде
+//ниже, чтобы она могла вызывать функцию user.login(true) как
+//ok и функцию user.login(false) как fail?
 function askPassword(ok, fail) {
 let password = prompt("Password?", '');
 if (password == "rockstar") ok();
@@ -62,15 +66,18 @@ login(result) {
 alert( this.name + (result ? ' logged in' : ' failed to log in') );
 }
 };
-askPassword(?, ?);
+//askPassword(?, ?);
+
+
 //6. Напишите в указанном месте конструкцию с методом bind()
 //так, чтобы this внутри функции func всегда указывал на value.
 //из переменной elem.
 
-const elem = {value: ‘Привет’}
-function func(surname, name) {
-alert(this.value + ', ' + surname + ' ' + name);
-}
+// const elem = {value: ‘Привет’}
+// function func(surname, name) {
+// alert(this.value + ', ' + surname + ' ' + name);
+// }
+
 //Тут напишите конструкцию с bind()
 func('Иванов', 'Иван'); //тут должно вывести 'привет, Иванов Иван'
 func('Петров', 'Петр'); //тут должно вывести 'привет, Петров Петр'

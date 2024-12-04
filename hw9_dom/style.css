@@ -32,6 +32,22 @@ h1 {
   background-color: grey;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    height: 100px;
+    background-color: yellowgreen;
+  }
+
+  li.completed {
+     text-decoration: line-through;
+      background: #d0ffd0;
+   }
+
 .container {
   padding: 15px;
 }
@@ -39,4 +55,11 @@ h1 {
 ul {
   margin-bottom: 20px;
   list-style-type: none;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 20px;  
+
 }

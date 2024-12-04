@@ -1,6 +1,42 @@
 body,
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: green;
+}
+
+.title {
+  background-color: aquamarine;
+}
+
+.title span {
+  color: red;
+}
+
+.red {
+  color: red;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: 700;
+  width: 100%;
+  height: 100px;
+  background-color: grey;
+}
+
+.container {
+  padding: 15px;
+}
+
+ul {
+  margin-bottom: 20px;
+  list-style-type: none;
 }
